@@ -66,8 +66,8 @@ def unpackMeshAsFaces():
     return faces
 
 
-def createMesh():
-    with open(bpy.path.abspath('//Beethoven.obj')) as p:
+def loadMesh(path):
+    with open(bpy.path.abspath('//' + path)) as p:
         lines = p.readlines()
 
     vertices = []
@@ -139,13 +139,18 @@ def runClient(bcPort):
     connection = http.client.HTTPConnection('127.0.0.1', bcPort)
 
     while 1:
-        command = input('Command: ').strip()
+        tokens = input('Command: ').split()
+        command = tokens[0].strip()
+        arg = ''
 
-        if command == 'create':
+        if len(tokens) > 1:
+            arg = tokens[1].strip()
+
+        if command == 'load':
             if meshExists():
                 print('Mesh already exists!')
             else:
-                createMesh()
+                loadMesh(arg)
         elif command == 'commit':
             if meshExists():
                 faces = unpackMeshAsFaces()
@@ -182,14 +187,14 @@ def runMain():
         bcPort = int(input('Blockchain client port: '))
 
     print(
-        '+-------------------------------------+\n'
-        '| My port: %04d                       |\n'
-        '| Blockchain client port: %04d        |\n'
-        '|                                     |\n'
-        '| Commands:                           |\n'
-        '| - create: Create a new mesh.        |\n'
-        '| - commit: Commit the current mesh.  |\n'
-        '+-------------------------------------+\n'
+        '+---------------------------------------+\n'
+        '| My port: %04d                         |\n'
+        '| Blockchain client port: %04d          |\n'
+        '|                                       |\n'
+        '| Commands:                             |\n'
+        '| - load model.obj: Load model.obj.     |\n'
+        '| - commit: Commit the current version. |\n'
+        '+---------------------------------------+\n'
         % (myPort, bcPort)
     )
 

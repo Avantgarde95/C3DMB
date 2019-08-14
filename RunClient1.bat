@@ -1,1 +1,1 @@
-gradlew run -PappArgs="['Settings1.json']"
+gradlew run --args=Settings1.json
