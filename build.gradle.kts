@@ -30,7 +30,7 @@ dependencies {
 
     arrayOf("", "-glfw", "-jemalloc", "-openal", "-opengl", "-stb").forEach { type ->
         arrayOf("", ":natives-windows", ":natives-linux").forEach { platform ->
-            implementation("org.lwjgl:lwjgl$type:3.2.2-SNAPSHOT$platform")
+            implementation("org.lwjgl:lwjgl$type:3.2.3-SNAPSHOT$platform")
         }
     }
 }
