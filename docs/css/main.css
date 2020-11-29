@@ -1,0 +1,197 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+
+    background-color: #262626;
+}
+
+.Page {
+    box-sizing: border-box;
+
+    width: 100%;
+    margin: 0;
+    padding: 1rem 1.5rem;
+
+    color: #ffffff;
+}
+
+.Link {
+    color: #8be3ee;
+}
+
+.Link:hover {
+    color: #bdb9ee;
+}
+
+.Navigation {
+    width: 100%;
+    margin-left: -1rem;
+}
+
+.Navigation_Item {
+    box-sizing: border-box;
+    text-decoration: none;
+
+    margin-right: 1rem;
+    padding: 0.2rem 0.5rem;
+
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.Navigation_Item:hover,
+.Navigation_Item:visited,
+.Navigation_Item:active,
+.Navigation_Item:focus {
+    text-decoration: none;
+}
+
+.Header {
+    text-align: center;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.Header_Title {
+    font-size: 1.5rem;
+}
+
+.Header_AuthorList {
+    margin-top: 0.5rem;
+
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.Header_Author {
+    margin-left: 1rem;
+}
+
+.Header_Author:first-child {
+    margin-left: 0;
+}
+
+.Header_Submit {
+    margin-top: 0.5rem;
+
+    font-size: 1rem;
+}
+
+.Section {
+    margin-top: 1rem;
+}
+
+.Section_Title {
+    border-left: 0.5rem solid #a2c4c4;
+    margin-left: -1rem;
+    padding-left: 0.5rem;
+
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.Section_Content {
+    margin-top: 1rem;
+
+    line-height: 1.5rem;
+}
+
+.Section_Figure {
+    width: 100%;
+}
+
+.Section_FigureBox {
+    display: block;
+    cursor: zoom-in;
+
+    width: 100%;
+    margin: auto;
+}
+
+.Section_FigureContent {
+    width: 100%;
+}
+
+.Section_FigureCaption {
+    width: 100%;
+    margin: 1rem auto;
+    font-style: italic;
+}
+
+.Section_Video {
+    display: block;
+
+    width: 100%;
+    margin: auto;
+
+    border: 2px solid #ffffff;
+}
+
+.Section_VideoBox {
+    position: relative;
+
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.Section_VideoContent {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 426px) {
+    .Page {
+        padding: 1rem 3rem;
+    }
+
+    .Header_Title {
+        font-size: 2rem;
+    }
+
+    .Header_AuthorList {
+        font-size: 1.5rem;
+    }
+
+    .Header_Author {
+        margin-left: 4rem;
+    }
+
+    .Header_Submit {
+        font-size: 1.5rem;
+    }
+
+    .Section_Figure {
+        display: inline-block;
+        vertical-align: top;
+
+        width: 49%;
+    }
+
+    .Section_FigureBox {
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .Section_FigureCaption {
+        width: 90%;
+        max-width: 800px;
+    }
+
+    .Section_Video {
+        width: 80%;
+        max-width: 900px;
+    }
+}
