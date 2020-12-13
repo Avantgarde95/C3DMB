@@ -111,7 +111,7 @@ body {
 
 .Section_FigureBox {
     display: block;
-    cursor: zoom-in;
+    cursor: pointer;
 
     width: 100%;
     margin: auto;
